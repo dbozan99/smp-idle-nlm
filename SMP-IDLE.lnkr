@@ -1,0 +1,22 @@
+OPTION ELIMINATE
+DEBUG NOVELL
+SYSTEM netware_libc
+OPTION DESCRIPTION 'Multi-CPU HLT Utility for NW 5 and 6'
+OPTION XDCDATA=SMP-IDLE.xdc
+#OPTION PSEUDOPREEMPTION
+OPTION CaseExact
+OPTION Map=SMP-IDLE.map
+OPTION SymFile=SMP-IDLE.sym
+OPTION Version=1.0
+OPTION Stack=128k
+OPTION ScreenName 'None'
+OPTION ThreadName 'SMP-IDLE'
+OPTION Copyright '(C) 2026 dbozan99 - The MIT License'
+
+# Add LibC as an auto-load dependency so the OS knows NKS is required
+MODULE LibC
+
+NAME SMP-IDLE.NLM
+FILE C:\NWSDK\merge\imports\libcpre.obj
+FILE SMP-IDLE.obj
+OPTION NoDefaultLibs
