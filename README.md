@@ -10,12 +10,12 @@ I've tried to make the code as bulletproof as I can so you should have no issues
 If you're installing Netware, you may have better luck doing a manual install and when it asks about the PSMs, remove the ACPI driver and add the MPS driver instead. The ACPI driver seems to be very picky about the hardware it wants to run on.
 
 ## Installation and usage
-Put `SMP-IDLE.NLM` at "`SYS:SYSTEM\SMP-IDLE.NLM`"
+Put `SMP-IDLE.NLM` at "`SYS:\SYSTEM\SMP-IDLE.NLM`"
 
 Load it with the "`LOAD SMP-IDLE.NLM`" command.
 
 _(optional, but recommended)_ 
-Add the following line to your "`SYS:SYSTEM\AUTOEXEC.NCF`" file:
+Add the following line to your "`SYS:\SYSTEM\AUTOEXEC.NCF`" file:
 
 `LOAD SMP-IDLE.NLM`
 
